@@ -1,2 +1,3 @@
 # TH
-Exempelkod Effektiv Python
+Exempelkod Effektiv Python Teknikhögskolan
+
