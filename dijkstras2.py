@@ -21,7 +21,6 @@ class Graph:
         self.v = num_of_vertices
         self.edges = {v:{} for v in range(self.v)}
         self.visited = {}
-        self.path = []
 
 
     def add_edge(self, u: int, v: int, weight: int):
