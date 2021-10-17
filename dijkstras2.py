@@ -34,6 +34,8 @@ class Graph:
     def traverse(self, start_vertex: int, stop_vertex: int, path: List) -> List[int]:
         """
         One-liner practice för att få den faktiska pathen via rekursion.
+        Om vi inte har nått hela vägen från vår slutnod till startnod kallar vi på traverse igen med vår nästa nod och lägger till nuvarande nod i vår path.
+        Avbryter då vi nått startnoden och ger tillbaks den omvända ordningen inklusive startnod för att få vägen från start till slut.
         """
 
         return [*self.traverse(start_vertex, self.visited[stop_vertex], path), stop_vertex] if stop_vertex != start_node else list(reversed([*path,start_node]))
