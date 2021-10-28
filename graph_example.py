@@ -29,6 +29,7 @@ class Graph:
         """
         Metod som går längs grafen och sparar ner stegen som tagits.
         Vertex anger startpunkt, nr_of_steps anger hur många steg som ska tas.
+        
         """
         for _ in range(nr_of_steps):
             self.travelled_path.append(vertex)
