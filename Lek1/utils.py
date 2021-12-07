@@ -51,3 +51,11 @@ def random_search(domain, fitness_function):
 #Slumpa start- och slutvärde i en lista, skicka in i fitness function. Returnera en lista med bästa lösning.
 #Gör denna sökning 1000 gånger per function call och spara fitnessfunktionens resultat för 50 function calls.
 #Någon slutsats?
+
+
+def hill_climb(domain, fitness_function):
+    pass
+#Gör för varje grannpar i schedule för varje index en ny lista med värden originalvärde +/- 1. Testa varje kombination med fitnessfunktionen och spara körningens
+#bästa resultat och använd den som schedule för nästa iteration. Bryt när ingen utav grannlösningarna genererar en bättre lösning.
+#Exempel: [2, 3, 4] genererar vid lokalsökning listorna [1, 3, 4] och [3, 3, 4], [2, 2, 4] och [2, 4, 4] samt [2, 3, 3] och [2, 3, 5]
+#(alt. [[1, 3, 4], [3, 3, 4], [2, 2, 4], [2, 4, 4], [2, 3, 3], [2, 3, 5]]
