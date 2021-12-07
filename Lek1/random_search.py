@@ -72,7 +72,7 @@ def get_minutes(hour: str):
 def fitness_function(solution):
     total_price = 0
     last_arrival = 0
-    first_departure = 0#Sämsta tänkbara värde
+    first_departure = 1439#Sämsta tänkbara värde
 
     flight_id = -1
     for i in range(len(solution) // 2):
