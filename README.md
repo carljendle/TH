@@ -1,3 +1,3 @@
 # TH
-Exempelkod Effektiv Python Teknikhögskolan
+Lektionsmaterial Pythonutvecklare Teknikhögskolan
 
