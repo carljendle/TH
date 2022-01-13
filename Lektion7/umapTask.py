@@ -19,4 +19,4 @@ print(f'{len(dataset.target_names)} categories')
 #Använd umap för att skapa en 2D-representation med färgkodade labels för dokumenten och plotta.
 
 
-#Testa sedan att ta bort alla ord som förekommer färre än 5 gånger i datasetet.
+#Testa sedan att ta bort alla ord som förekommer färre än 5 gånger i datasetet och klustra sedan igen med umap.
