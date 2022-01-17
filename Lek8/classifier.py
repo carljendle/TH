@@ -10,6 +10,7 @@ B = [5, 1]
 
 n_per_clust = 100
 
+#Gör exempel med lite random noise
 a = [A[0] + np.random.randn(n_per_clust), A[1] + np.random.randn(n_per_clust)]
 b = [B[0] + np.random.randn(n_per_clust), B[1] + np.random.randn(n_per_clust)]
 
@@ -21,10 +22,8 @@ data = np.hstack((a,b)).T
 print(data.shape)
 
 
-data = torch.tensor(data)
-print(data)
-labels = torch.tensor(labels)
-print(labels)
+data = torch.tensor(data).float()
+labels = torch.tensor(labels).float()
 
 model = nn.Sequential(
     nn.Linear(2,1),
@@ -32,6 +31,7 @@ model = nn.Sequential(
     nn.Linear(1,1),
     nn.Sigmoid()
 )
+#Överblick av modellen
 print(model)
 
 learning_rate = 0.01
@@ -61,3 +61,7 @@ for epoch in range(num_epochs):
     optimizer.step()
 
 
+preds = model(data).detach()
+#print(preds.detach())
+for pred in preds:
+    print(pred)
