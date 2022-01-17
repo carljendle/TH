@@ -9,7 +9,7 @@ N = 30
 
 x = torch.randn(N,1)
 print(x)
-#Ger oss 
+#Ger oss ett linjärt samband mellan x och y, dock med lite brus.
 y = x + torch.randn(N,1)/2
 
 model = nn.Sequential(nn.Linear(1,1), nn.ReLU(), nn.Linear(1,1))
@@ -19,6 +19,7 @@ print(model)
 
 learning_rate = 0.05
 
+#MSE - vi vill predicta ett kontinuerligt värde i och med regressionsmodell
 loss_criterion = nn.MSELoss()
 
 optimizer = torch.optim.SGD(model.parameters(), lr = learning_rate)
@@ -46,8 +47,8 @@ for epoch in range(n_epochs):
 
 
 preds = model(x)
-print(preds.item())
-#Detachsteget
+
+#Detachsteget gör att vi kopplar loss från gradientberäkningarna. Vill vi använda 
 print(preds.detach())
 
 testloss = ((preds - y)**2).mean()
@@ -55,5 +56,3 @@ testloss = ((preds - y)**2).mean()
 plt.plot(losses.detach(), 'o')
 plt.plot(n_epochs,testloss.detach(), 'ro')
 plt.show()
-#print(testloss)
-#print(list_losses)
